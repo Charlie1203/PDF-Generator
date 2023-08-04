@@ -98,7 +98,7 @@ function generar() {
 				imageHeight
 			);
 
-			doc.save("sample.pdf"); // Guarda el documento PDF
+			doc.save("Certificado.pdf"); // Guarda el documento PDF
 		});
 	}
 }
