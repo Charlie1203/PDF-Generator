@@ -1,0 +1,86 @@
+/* CSS PARA EL CERTIFICADO */
+
+.certificado {
+	background-image: url(./images/fondo\ para\ certificados-02\ 1.png);
+	background-size: cover;
+	width: 720px;
+	height: 512px;
+	position: relative;
+}
+
+.medalla {
+	position: absolute;
+	width: 34%;
+	right: 0;
+}
+
+/* body {
+	overflow-y: hidden;
+} */
+
+.centrado {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-size: 3.7rem;
+	font-weight: 700;
+}
+
+.subTitle {
+	letter-spacing: 0.5px;
+	font-size: 1.7rem;
+}
+
+.paragraph {
+	font-weight: 600;
+}
+
+.firma {
+	width: 35%;
+}
+
+.firma2 {
+	width: 25%;
+}
+
+.logos {
+	width: 75%;
+}
+
+/* CSS PARA EL FORMULARIO */
+
+.formCont {
+	background: rgb(231, 226, 226);
+	height: 100vh;
+	width: 100vw;
+}
+
+.formCont p {
+	text-align: start;
+	font-weight: 600;
+}
+
+.formCont select {
+	border-radius: 5px;
+	border: none;
+	box-shadow: 1px 2px 2px 1px rgba(75, 72, 72, 0.726);
+}
+
+.formCont input {
+	border-radius: 5px;
+	border: none;
+	box-shadow: 1px 2px 2px 1px rgba(75, 72, 72, 0.726);
+}
+
+.formCont button {
+	border-radius: 5px;
+	border: none;
+	box-shadow: 1px 2px 2px 1px rgba(75, 72, 72, 0.726);
+	background: #ed2025;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
