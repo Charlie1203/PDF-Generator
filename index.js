@@ -29,13 +29,19 @@ function capitalizeFirstLetter(string) {
 
 function generar() {
 	let sexo = document.getElementById("sexo").value;
+
 	let nombre = capitalizeFirstLetter(document.getElementById("nombre").value);
+
 	let curso = capitalizeFirstLetter(document.getElementById("curso").value);
 	let dni = document.getElementById("dni").value;
 	let apellido = capitalizeFirstLetter(
 		document.getElementById("apellido").value
 	);
 	let fecha = document.getElementById("fecha").value;
+	let horas = document.getElementById("horas").value;
+	let modulo = document.getElementById("modulo").value;
+	let formato = document.getElementById("formato").value;
+	let centro = document.getElementById("centro").value;
 	let quien, señor; // Declarar las variables fuera del bloque if
 
 	if (
@@ -44,7 +50,11 @@ function generar() {
 		curso === "" ||
 		dni === "" ||
 		apellido === "" ||
-		fecha === ""
+		fecha === "" ||
+		horas === "" ||
+		modulo === "" ||
+		formato === "" ||
+		centro === ""
 	) {
 		alert(
 			"Por favor, completa todos los campos antes de generar el certificado."
@@ -67,13 +77,14 @@ function generar() {
 		// Obtiene la fecha formateada
 		let fechaFormateada = obtenerFechaFormateada(dia, mes, año);
 
-		// Completa las variables en el texto del certificado
-		let certificadoText = `Se certifica que ${quien} ${señor} ${
-			nombre + " " + apellido
-		}, DNI: ${dni} ha finalizado cada una de las instancias correspondientes al curso de ${curso}, el día ${fechaFormateada}, mediante el Centro de Capacitación Online de Grupo San Miguel.`;
+		//styles
 
-		// Asigna el texto del certificado a la sección correspondiente de tu HTML
-		document.getElementById("certificado-texto").innerText = certificadoText;
+		// Completa las variables en el texto del certificado
+		let certificadoText = `Se certifica que ${quien} <span class='text-red'>${señor} ${
+			nombre + " " + apellido
+		}</span>, DNI: <span class='text-red'>${dni}</span> ha aprobado cada una de las instancias correspondientes al <span class='text-red'>${modulo}</span> de <span class='text-red'>${curso}</span>, el día <span class='text-red'>${fechaFormateada}</span>, con una carga horaria de <span class='text-red'>${horas}hs</span>, mediante el formato <span class='text-red'>${formato}</span> en <span class='text-red'>${centro}</span> y el Póligono de tiro del Centro Argentino de Seguridad (CAS).`;
+
+		document.getElementById("certificado-texto").innerHTML = certificadoText;
 
 		document.getElementById("form").style.display = "none";
 		document.getElementById("certificate").style.display = "flex";

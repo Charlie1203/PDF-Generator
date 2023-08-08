@@ -16,12 +16,12 @@
 	<body>
 		<div id="form" class="container-fluid formCont px-5">
 			<div class="row px-5">
-				<div class="col-12 text-center mt-5">
+				<div class="col-12 text-center mt-3">
 					<h1>Completar los datos</h1>
 					<hr style="border: 2px solid black" />
 
 					<!-- FORM -->
-					<div class="row px-5 mt-5">
+					<div class="row px-5 mt-4">
 						<div class="col-lg-6 col-12">
 							<div class="px-5">
 								<p class="mb-1 px-1">Sexo:</p>
@@ -31,7 +31,7 @@
 									<option value="mujer">Mujer</option>
 								</select>
 							</div>
-							<div class="px-5 mt-4">
+							<div class="px-5 mt-3">
 								<p class="mb-1 px-1">Nombre:</p>
 								<input
 									type="text"
@@ -40,7 +40,7 @@
 									id="nombre"
 								/>
 							</div>
-							<div class="px-5 mt-4">
+							<div class="px-5 mt-3">
 								<p class="mb-1 px-1">Curso finalizado:</p>
 								<input
 									type="text"
@@ -48,6 +48,23 @@
 									placeholder="Escribir"
 									id="curso"
 								/>
+							</div>
+							<div class="px-5 mt-3">
+								<p class="mb-1 px-1">Módulo:</p>
+								<select name="" class="w-100 py-2 px-2" id="modulo">
+									<option value="" disabled selected hidden>Seleccionar</option>
+									<option value="Módulo 1">1</option>
+									<option value="Módulo 2">2</option>
+									<option value="Módulo 3">3</option>
+									<option value="Módulo 4">4</option>
+								</select>
+							</div>
+							<div class="px-5 mt-3">
+								<p class="mb-1 px-1">Formato:</p>
+								<select name="" class="w-100 py-2 px-2" id="formato">
+									<option value="" disabled selected hidden>Seleccionar</option>
+									<option value="híbrido">híbrido</option>
+								</select>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
@@ -60,7 +77,7 @@
 									id="dni"
 								/>
 							</div>
-							<div class="px-5 mt-4">
+							<div class="px-5 mt-3">
 								<p class="mb-1 px-1">Apellido:</p>
 								<input
 									type="text"
@@ -69,7 +86,7 @@
 									id="apellido"
 								/>
 							</div>
-							<div class="px-5 mt-4">
+							<div class="px-5 mt-3">
 								<p class="mb-1 px-1">Fecha:</p>
 								<input
 									type="date"
@@ -78,8 +95,28 @@
 									placeholder="00"
 								/>
 							</div>
+							<div class="px-5 mt-3">
+								<p class="mb-1 px-1">Cargar horaria (en horas)</p>
+								<input
+									type="number"
+									class="w-100 py-2 px-2"
+									placeholder="Escribir"
+									id="horas"
+								/>
+							</div>
+							<div class="px-5 mt-3">
+								<p class="mb-1 px-1">Centro de capacitación:</p>
+								<select name="" class="w-100 py-2 px-2" id="centro">
+									<option value="" disabled selected hidden>Seleccionar</option>
+									<option
+										value="Centro de Capacitación Online de Grupo San Miguel"
+									>
+										Centro de Capacitación Online de Grupo San Miguel
+									</option>
+								</select>
+							</div>
 						</div>
-						<div class="col-12 text-end px-5 mt-5">
+						<div class="col-12 text-end px-5">
 							<div class="px-2 mx-1 mt-5">
 								<button onclick="generar()" class="px-5 py-2">
 									Generar Certificado
@@ -107,16 +144,21 @@
 						<div class="row px-5">
 							<div class="col-12 px-5 mt-5 text-start">
 								<h1 class="title mt-1 pt-2">CERTIFICADO</h1>
-								<h1 class="subTitle">CONSTANCIA DE {VARIABLE}</h1>
+								<h1 class="subTitle">
+									CONSTANCIA DE
+									<b style="color: red; font-weight: 600">APROBACIÓN</b>
+								</h1>
 								<p
 									id="certificado-texto"
 									class="mt-4 paragraph"
 									style="position: relative; bottom: -3%"
 								>
-									Se certifica que el/la Sr./Sra {variable}, DNI {variable} ha
-									finalizado cada una de las instancias correspondientes al
-									curso {variable}, a los {v} días del mes de {v} del año {v} ,
-									mediante el Centro de Capacitación Online de Grupo San Miguel.
+									Se certifica que el Sr Carlos Laprida, DNI: 42835969 ha
+									aprobado cada una de las instancias correspondientes al Módulo
+									2 de Armas, el día Martes 08 de Agosto del año 2023, con una
+									carga horaria de 15hs, mediante el formato híbrido en Centro
+									de Capacitación Online de Grupo San Miguel y el Póligono de
+									tiro del Centro Argentino de Seguridad (CAS).
 								</p>
 							</div>
 							<div class="col-6 text-center px-5">
@@ -171,11 +213,20 @@
 								/>
 							</div>
 						</div>
-						<div style="height: 4px; background: #ed2025"></div>
 						<div
 							class="w-100"
 							style="
-								height: 30px;
+								height: 3px;
+								background: #ed2025;
+								position: absolute;
+								z-index: 20;
+								bottom: 1.7em;
+							"
+						></div>
+						<div
+							class="w-100"
+							style="
+								height: 25px;
 								background: #1870af;
 								position: absolute;
 								bottom: 0;
