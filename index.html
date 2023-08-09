@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Formulario</title>
 		<link rel="shortcut icon" href="./images/GSM-PRINCIPAL 2.png" />
 		<link
@@ -13,7 +13,7 @@
 		/>
 		<link rel="stylesheet" href="index.css" />
 	</head>
-	<body style="height: 100vh; width: 100vw;">
+	<body style="height: 100vh; width: 100vw;" id="thebody">
 		<div id="form" class="container-fluid formCont px-5">
 			<div class="row px-5">
 				<div class="col-12 text-center mt-3">
@@ -158,8 +158,10 @@
 			</div>
 
 
-			<div class="row ">
-				<div class="col-6 text-center px-5">
+			<div class="row">
+				<div class="col-2">					
+				</div>
+				<div class="col-3 text-center">
 					<img
 						src="./images/WhatsApp Image 2023-08-02 at 11.49.39 AM-gigapixel-standard-scale-2_00x-PhotoRoom 1.png"
 						class="img-fluid firma"
@@ -178,7 +180,11 @@
 						Jefe de Capacitaciones
 					</p>
 				</div>
-				<div class="col-6 text-center px-5">
+				<div class="col-2" style="    display: flex;
+				justify-content: center;">
+					<div id="qrcode"></div>
+				</div>
+				<div class="col-3 text-center">
 					<img
 						src="./images/WhatsApp Image 2023-08-02 at 11.49.46 AM-gigapixel-standard-scale-2_00x-PhotoRoom 1.png"
 						class="img-fluid firma"
@@ -203,6 +209,8 @@
 					>
 						Gerente de Custodias MET
 					</p>
+				</div>
+				<div class="col-2">					
 				</div>
 
 			</div>
@@ -236,6 +244,9 @@
 						<img src="images/GSM-CUSTOMERSPROTECTION.png" style="" class="img-fluid icons" alt="">
 					</div>
 				</div>
+			
+			</div>
+			<div class="row w-100">
 				<div class="barrita mt-5">
 					<div
 					class="w-100 mt-3 mb-2"
@@ -278,6 +289,26 @@
 			integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
 		<script src="index.js"></script>
+		
+
+		<style>
+			@media print {
+			body, element {
+				-webkit-print-color-adjust: exact; /* Chrome, Safari */
+				color-adjust: exact; /* Firefox */
+			}
+			@media print {
+			.barrita {
+				display: block !important;
+			}
+}
+
+		
+		}
+
+		</style>
 	</body>
 </html>

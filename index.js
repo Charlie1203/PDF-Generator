@@ -44,6 +44,10 @@ function generar() {
 	let centro = document.getElementById("centro").value;
 	let quien, señor; // Declarar las variables fuera del bloque if
 
+	let url = "https://www.gruposanmiguel.com.ar/Certificados/index.html?DNI=" + dni
+	generateQRCode(url);
+
+
 	if (
 		sexo === "" ||
 		nombre === "" ||
@@ -90,42 +94,65 @@ function generar() {
 		//document.getElementById("cont-certificado").style.display = "flex";
 
 		//ESTO EJECUTA LA DESCARGA
-		// Assuming you have an element with the id "cont-certificado"
-		html2canvas(document.getElementById("cont-certificado")).then(function (canvas) {
-			var imgData = canvas.toDataURL("image/png");
-			var doc = new jsPDF("l", "mm", "a4"); // Use "l" for landscape orientation
+		// // Assuming you have an element with the id "cont-certificado"
+		// html2canvas(document.getElementById("thebody")).then(function (canvas) {
+		// 	var imgData = canvas.toDataURL("image/png");
+		// 	var doc = new jsPDF("l"); // No specific page size or orientation
 		
-			var pageWidth = 297; // Width of the page in mm for A4 landscape
-			var pageHeight = 210; // Height of the page in mm for A4 landscape
+		// 	var pdfWidth = doc.internal.pageSize.getWidth();
+		// 	var pdfHeight = doc.internal.pageSize.getHeight();
 		
-			var imageAspectRatio = canvas.width / canvas.height;
-			var pdfAspectRatio = pageWidth / pageHeight;
+		// 	var contentAspectRatio = canvas.width / canvas.height;
+		// 	var pdfAspectRatio = pdfWidth / pdfHeight;
 		
-			var imageWidth, imageHeight;
+		// 	var scale;
 		
-			if (imageAspectRatio > pdfAspectRatio) {
-				imageWidth = pageWidth;
-				imageHeight = canvas.height * (pageWidth / canvas.width);
-			} else {
-				imageHeight = pageHeight;
-				imageWidth = pageWidth;
-			}
+		// 	if (contentAspectRatio > pdfAspectRatio) {
+		// 		// Scale based on width
+		// 		scale = pdfWidth / canvas.width;
+		// 	} else {
+		// 		// Scale based on height
+		// 		scale = pdfHeight / canvas.height;
+		// 	}
 		
-			// Add the image to the PDF document with the adjusted dimensions and positioning
-			doc.addImage(
-				imgData,
-				"PNG",
-				(pageWidth - imageWidth) / 2, // Center the image horizontally
-				(pageHeight - imageHeight) / 2, // Center the image vertically
-				imageWidth,
-				imageHeight
-			);
+		// 	var imageWidth = canvas.width * scale;
+		// 	var imageHeight = canvas.height * scale;
 		
-			doc.save("Certificado.pdf"); // Save the PDF document
-		});
+		// 	// Add the image to the PDF document with the adjusted dimensions and positioning
+		// 	doc.addImage(
+		// 		imgData,
+		// 		"PNG",
+		// 		(pdfWidth - imageWidth) / 2, // Center the image horizontally
+		// 		(pdfHeight - imageHeight) / 2, // Center the image vertically
+		// 		imageWidth,
+		// 		imageHeight
+		// 	);
+		
+		// 	doc.save("Certificado.pdf"); // Save the PDF document
+		// });
+		
+		
+
 		
 
 		
 		
 	}
 }
+
+function generateQRCode(url) {
+    // clear any existing content
+    document.getElementById('qrcode').innerHTML = "";
+    let width = 80;
+    let height = 80;
+    // create a new QR code
+    const qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: url,
+        width: width,
+        height: height,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+}
+

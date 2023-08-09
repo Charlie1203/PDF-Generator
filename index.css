@@ -17,7 +17,7 @@ body {
 
 .medalla {
 	position: absolute;
-	height: 23rem;
+	height: 20rem;
 	right: 0;
 	top: 0%;
 
@@ -45,7 +45,11 @@ body {
     width: 50%;
 }
 .barrita{
-
+	position: absolute;
+	bottom: 0;
+	padding: 0;
+right: 0;
+left: 0;
 }
 
 /* body {
@@ -122,6 +126,19 @@ body {
 	font-weight: 600;
 }
 
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10%;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+	border: 1px solid black;
+}
+
 .text-red {
-	color: red;
+	/* color: red; */
 }
