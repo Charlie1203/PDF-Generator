@@ -87,29 +87,45 @@ function generar() {
 		document.getElementById("certificado-texto").innerHTML = certificadoText;
 
 		document.getElementById("form").style.display = "none";
-		document.getElementById("certificate").style.display = "flex";
+		//document.getElementById("cont-certificado").style.display = "flex";
 
 		//ESTO EJECUTA LA DESCARGA
-
-		html2canvas(document.querySelector(".certificado")).then(function (canvas) {
+		// Assuming you have an element with the id "cont-certificado"
+		html2canvas(document.getElementById("cont-certificado")).then(function (canvas) {
 			var imgData = canvas.toDataURL("image/png");
-			var doc = new jsPDF("p", "mm", "a4"); // Crea un nuevo documento PDF en formato A4
-
-			var pageWidth = 210; // Ancho de la página en mm para formato A4
-			var imageWidth = pageWidth * 0.9; // Anchura de la imagen es 90% del ancho de la página
-			var imageHeight = imageWidth / 1.41; // Altura de la imagen es proporcional a su anchura
-
-			// Añade la imagen al documento PDF con las dimensiones calculadas
+			var doc = new jsPDF("l", "mm", "a4"); // Use "l" for landscape orientation
+		
+			var pageWidth = 297; // Width of the page in mm for A4 landscape
+			var pageHeight = 210; // Height of the page in mm for A4 landscape
+		
+			var imageAspectRatio = canvas.width / canvas.height;
+			var pdfAspectRatio = pageWidth / pageHeight;
+		
+			var imageWidth, imageHeight;
+		
+			if (imageAspectRatio > pdfAspectRatio) {
+				imageWidth = pageWidth;
+				imageHeight = canvas.height * (pageWidth / canvas.width);
+			} else {
+				imageHeight = pageHeight;
+				imageWidth = pageWidth;
+			}
+		
+			// Add the image to the PDF document with the adjusted dimensions and positioning
 			doc.addImage(
 				imgData,
 				"PNG",
-				(pageWidth - imageWidth) / 2,
-				10,
+				(pageWidth - imageWidth) / 2, // Center the image horizontally
+				(pageHeight - imageHeight) / 2, // Center the image vertically
 				imageWidth,
 				imageHeight
 			);
-
-			doc.save("Certificado.pdf"); // Guarda el documento PDF
+		
+			doc.save("Certificado.pdf"); // Save the PDF document
 		});
+		
+
+		
+		
 	}
 }

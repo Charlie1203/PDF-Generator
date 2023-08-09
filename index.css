@@ -6,16 +6,46 @@ body {
 
 .certificado {
 	background-image: url(./images/fondo\ para\ certificados-02\ 1.png);
-	background-size: cover;
-	width: 720px;
-	height: 512px;
-	position: relative;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    display: flex;
+    background-color: aquamarine;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .medalla {
 	position: absolute;
-	width: 34%;
+	height: 23rem;
 	right: 0;
+	top: 0%;
+
+}
+
+#certificado-texto{
+	position: relative;
+    bottom: -3%;
+	font-size: 1.3rem;
+}
+
+.icons{
+	height:4rem;
+	aspect-ratio: 2/1;
+}
+
+.banderitasrow{
+	display: flex;
+    justify-content: center;
+}
+
+.banderitas{
+	display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.barrita{
+
 }
 
 /* body {
@@ -23,9 +53,9 @@ body {
 } */
 
 .centrado {
-	display: flex;
+	/* display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; */
 }
 
 .title {
@@ -43,7 +73,8 @@ body {
 }
 
 .firma {
-	width: 35%;
+	height: 6rem;
+	transform: translate(0px,1.2rem);
 }
 
 .firma2 {
@@ -51,7 +82,7 @@ body {
 }
 
 .logos {
-	width: 75%;
+
 	position: relative;
 	top: -0.7em;
 }

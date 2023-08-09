@@ -13,7 +13,7 @@
 		/>
 		<link rel="stylesheet" href="index.css" />
 	</head>
-	<body>
+	<body style="height: 100vh; width: 100vw;">
 		<div id="form" class="container-fluid formCont px-5">
 			<div class="row px-5">
 				<div class="col-12 text-center mt-3">
@@ -128,113 +128,137 @@
 			</div>
 		</div>
 
-		<div
-			class="container"
-			id="certificate"
-			style="height: 100vh; width: 100vw; display: none"
-		>
-			<div class="row h-100 w-100">
-				<div class="col-12 h-100 w-100 centrado">
-					<div class="certificado">
-						<img
-							src="./images/certificado de aprobación de cursos-03 1.png"
-							class="img-fluid medalla"
-						/>
+		<div class="certificado mx-0" id="cont-certificado">
+			<img
+				src="./images/certificado de aprobación de cursos-03 1.png"
+				class="img-fluid medalla"
+			/>
 
-						<div class="row px-5">
-							<div class="col-12 px-5 mt-5 text-start">
-								<h1 class="title mt-1 pt-2">CERTIFICADO</h1>
-								<h1 class="subTitle">
-									CONSTANCIA DE
-									<b style="color: red; font-weight: 600">APROBACIÓN</b>
-								</h1>
-								<p
-									id="certificado-texto"
-									class="mt-4 paragraph"
-									style="position: relative; bottom: -3%"
-								>
-									Se certifica que el Sr Carlos Laprida, DNI: 42835969 ha
-									aprobado cada una de las instancias correspondientes al Módulo
-									2 de Armas, el día Martes 08 de Agosto del año 2023, con una
-									carga horaria de 15hs, mediante el formato híbrido en Centro
-									de Capacitación Online de Grupo San Miguel y el Póligono de
-									tiro del Centro Argentino de Seguridad (CAS).
-								</p>
-							</div>
-							<div class="col-6 text-center px-5">
-								<img
-									src="./images/WhatsApp Image 2023-08-02 at 11.49.39 AM-gigapixel-standard-scale-2_00x-PhotoRoom 1.png"
-									class="img-fluid firma"
-								/>
-								<hr class="w-100 mb-0 mt-0" style="border: 1px solid black" />
-								<p
-									class="paragraph mt-0 pt-0 mb-0 pb-0"
-									style="font-size: 0.8rem"
-								>
-									Luís Rodríguez
-								</p>
-								<p
-									class="paragraph mt-0 pt-0 mb-0 pb-0"
-									style="font-size: 0.8rem; position: relative; top: -4%"
-								>
-									Jefe de Capacitaciones
-								</p>
-							</div>
-							<div class="col-6 text-center px-5">
-								<img
-									src="./images/WhatsApp Image 2023-08-02 at 11.49.46 AM-gigapixel-standard-scale-2_00x-PhotoRoom 1.png"
-									class="img-fluid firma2"
-								/>
-								<hr
-									class="w-100 mb-0 mt-0"
-									style="
-										border: 1px solid black;
-										position: relative;
-										top: -0.1em;
-									"
-								/>
-								<p
-									class="paragraph mt-0 pt-0 mb-0 pb-0"
-									style="font-size: 0.8rem"
-								>
-									Miguel Manrique
-								</p>
-								<p
-									class="paragraph mt-0 pt-0 mb-0 pb-0"
-									style="font-size: 0.8rem; position: relative; top: -4%"
-								>
-									Gerente de Custodias MET
-								</p>
-							</div>
-							<div class="col-12 text-center">
-								<img
-									src="./images/certificado de aprobación de cursos-04 1.png"
-									class="img-fluid logos"
-								/>
-							</div>
-						</div>
-						<div
-							class="w-100"
-							style="
-								height: 3px;
-								background: #ed2025;
-								position: absolute;
-								z-index: 20;
-								bottom: 1.7em;
-							"
-						></div>
-						<div
-							class="w-100"
-							style="
-								height: 25px;
-								background: #1870af;
-								position: absolute;
-								bottom: 0;
-							"
-						></div>
+			<div class="row px-5">
+				<div class="col-12 px-5 mt-5 text-start">
+					<h1 class="title mt-1 pt-2">CERTIFICADO</h1>
+					<h1 class="subTitle">
+						CONSTANCIA DE
+						<b style="color: red; font-weight: 600">APROBACIÓN</b>
+					</h1>
+					<p
+						id="certificado-texto"
+						class="mt-4 paragraph"
+						style=""
+					>
+						Se certifica que el Sr Carlos Laprida, DNI: 42835969 ha
+						aprobado cada una de las instancias correspondientes al Módulo
+						2 de Armas, el día Martes 08 de Agosto del año 2023, con una
+						carga horaria de 15hs, mediante el formato híbrido en Centro
+						de Capacitación Online de Grupo San Miguel y el Póligono de
+						tiro del Centro Argentino de Seguridad (CAS).
+					</p>
+				</div>
+
+			</div>
+
+
+			<div class="row ">
+				<div class="col-6 text-center px-5">
+					<img
+						src="./images/WhatsApp Image 2023-08-02 at 11.49.39 AM-gigapixel-standard-scale-2_00x-PhotoRoom 1.png"
+						class="img-fluid firma"
+					/>
+					<hr class="w-100 mb-0 mt-0" style="border: 1px solid black" />
+					<p
+						class="paragraph mt-2 pt-0 mb-0 pb-0"
+						style="font-size: 0.8rem"
+					>
+						Luís Rodríguez
+					</p>
+					<p
+						class="paragraph mt-0 pt-0 mb-0 pb-0"
+						style="font-size: 0.8rem; position: relative; top: -4%"
+					>
+						Jefe de Capacitaciones
+					</p>
+				</div>
+				<div class="col-6 text-center px-5">
+					<img
+						src="./images/WhatsApp Image 2023-08-02 at 11.49.46 AM-gigapixel-standard-scale-2_00x-PhotoRoom 1.png"
+						class="img-fluid firma"
+					/>
+					<hr
+						class="w-100 mb-0 mt-0"
+						style="
+							border: 1px solid black;
+							position: relative;
+							top: -0.1em;
+						"
+					/>
+					<p
+						class="paragraph mt-2 pt-0 mb-0 pb-0"
+						style="font-size: 0.8rem"
+					>
+						Miguel Manrique
+					</p>
+					<p
+						class="paragraph mt-0 pt-0 mb-0 pb-0"
+						style="font-size: 0.8rem; position: relative; top: -4%"
+					>
+						Gerente de Custodias MET
+					</p>
+				</div>
+
+			</div>
+
+			<div class="row ">
+				<div class="banderitasrow mt-5">
+					<div class="mx-auto" style="opacity: 0;">
+						<img src="images/GSM-SASE.svg" style="" class="img-fluid icons" alt="">
+					</div>
+					<div class="mx-auto mb-3">
+						<img src="images/GSM-FASIC.png" style="" class="img-fluid icons" alt="">
+					</div>
+					<div class="mx-auto mb-3">
+						<img src="images/GSM-SASE.png" style="" class="img-fluid icons" alt="">
+					</div>
+					<div class="mx-auto mb-3">
+						<img src="images/GSM-LAR.png" style="" class="img-fluid icons" alt="">
+					</div>
+
+					<div class="mx-auto mb-3">
+						<img src="images/GSM-CUSTOMERSPROTECTION.png" style="" class="img-fluid icons" alt="">
+					</div>
+					<div class="mx-auto mb-3">
+						<img src="images/GSM-PRIORITYpng.png" style="" class="img-fluid icons" alt="">
+					</div>
+
+					<div class="mx-auto mb-3">
+						<img src="images/Aval.png" style="" class="img-fluid icons" alt="">
+					</div>
+					<div class="mx-auto mb-3" style="opacity: 0;">
+						<img src="images/GSM-CUSTOMERSPROTECTION.png" style="" class="img-fluid icons" alt="">
 					</div>
 				</div>
+				<div class="barrita mt-5">
+					<div
+					class="w-100 mt-3 mb-2"
+					style="
+						height: 3px;
+						background: #ed2025;
+						
+						z-index: 20;
+						
+					"
+				></div>
+				<div
+					class="w-100"
+					style="
+						height: 25px;
+						background: #1870af;
+						
+						
+					"
+				></div>
+				</div>
 			</div>
+
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
